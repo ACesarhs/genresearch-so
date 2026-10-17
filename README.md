@@ -28,6 +28,8 @@ O sistema simula um pipeline completo de RAG, dividido nas seguintes etapas:
 5. **Cache Compartilhado**: Armazena respostas recentes em um dicionário protegido por `threading.Lock` (Mutex) para evitar condições de corrida.
 6. **Geração Simulada**: Uso de `time.sleep` para simular o custo computacional de um LLM real.
 
+---
+
 ### 📂 Estrutura de Pastas
 
 genresearch/
@@ -47,6 +49,8 @@ genresearch/
 │   └── 08_gerar_graficos.py       # Gera os gráficos em PNG
 ├── results/                       # CSVs e gráficos gerados
 └── data/                          # Banco SQLite e corpus (ignorados no git)
+
+---
 
 ## 💻 Ambiente de Execução
 
