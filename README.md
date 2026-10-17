@@ -32,23 +32,24 @@ O sistema simula um pipeline completo de RAG, dividido nas seguintes etapas:
 
 ### 📂 Estrutura de Pastas
 
-genresearch/
-├── src/
-│   ├── 02_ingest.py               # Ingestão e criação do SQLite
-│   ├── 03_retrieve_generate.py    # Teste inicial de busca e geração
-│   ├── 04_fila_concorrencia.py    # Fila com 2 produtores e 2 consumidores
-│   ├── 05_corrida_cache.py        # Demonstração de Race Condition (sem lock)
-│   ├── 06_cache_com_lock.py       # Correção da corrida usando Mutex
-│   └── 07_servidor_completo.py    # Simulação de carga massiva com 4 workers
-├── experiments/
-│   ├── 01_gerar_corpus.py         # Gera 500 documentos sintéticos (~2MB)
-│   ├── c1_c2_memoria.py           # Leitura convencional vs mmap
-│   ├── c1_c2_benchmark.py         # 3 repetições gerando CSV
-│   ├── c5_pressao.py              # Estresse de memória (OOM Killer)
-│   ├── c6_fila_saturada.py        # Falha controlada (Queue Full)
-│   └── 08_gerar_graficos.py       # Gera os gráficos em PNG
-├── results/                       # CSVs e gráficos gerados
-└── data/                          # Banco SQLite e corpus (ignorados no git)
+| Pasta / Arquivo | Descrição |
+| :--- | :--- |
+| 📁 `src/` | Código principal do servidor RAG |
+| └── `02_ingest.py` | Ingestão e criação do SQLite |
+| └── `03_retrieve_generate.py` | Teste inicial de busca e geração |
+| └── `04_fila_concorrencia.py` | Fila com 2 produtores e 2 consumidores |
+| └── `05_corrida_cache.py` | Demonstração de Race Condition (sem lock) |
+| └── `06_cache_com_lock.py` | Correção da corrida usando Mutex |
+| └── `07_servidor_completo.py` | Simulação de carga massiva com 4 workers |
+| 📁 `experiments/` | Scripts de testes e experimentos do SO |
+| └── `01_gerar_corpus.py` | Gera 500 documentos sintéticos (~2MB) |
+| └── `c1_c2_memoria.py` | Leitura convencional vs mmap |
+| └── `c1_c2_benchmark.py` | 3 repetições gerando CSV |
+| └── `c5_pressao.py` | Estresse de memória (OOM Killer) |
+| └── `c6_fila_saturada.py` | Falha controlada (Queue Full) |
+| └── `08_gerar_graficos.py` | Gera os gráficos em PNG |
+| 📁 `results/` | CSVs e gráficos gerados |
+| 📁 `data/` | Banco SQLite e corpus (ignorados no git) |
 
 ---
 
